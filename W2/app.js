@@ -11,16 +11,12 @@ let timeWokeUp = 8
 let drankMorningSmoothie = true
 let morningYoga = true
 
-showOnPage('<b>Is it my day off?</b>')
-
-showOnPage('<b>What time did i wake up?</b> ---> ' + timeWokeUp)
-let timeLeftToWalkDogs = (11 - timeWokeUp)
-showOnPage (timeLeftToWalkDogs + ' hours left to walk dogs before its too hot')
+showOnPage('<b>What time did i wake up?</b>')
 
 if (timeWokeUp >= 12) {
-showOnPage ('It is too late. It is too hot outside to walk dogs. I am unable to walk dogs this morning')
+showOnPage (timeWokeUp +', It is too late. It is too hot outside to walk dogs. I am unable to walk dogs this morning')
 } else if (timeWokeUp <12) {
-    showOnPage('It is still early. It will not be too hot to walk dogs. I am able to walk dogs')
+    showOnPage(timeWokeUp +', It is still early. It will not be too hot to walk dogs. I am able to walk dogs')
 }
 
 showOnPage('<b>Have I finished my morning exercise and drank my breakfast smoothie?</b>')
