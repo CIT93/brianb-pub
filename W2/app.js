@@ -4,41 +4,42 @@ const showOnPage = function (text) {
     let outputDiv = document.getElementById("output")
     outputDiv.append(newParagraph)
 }
+showOnPage('Am I able to walk my dogs today?')
 
-
-let dayOff = true
-
-if (dayOff = true) {
-    console.log('You can walk the dogs today')
-} else if (dayOff = false) {
-    console.log('You cant walk the dogs today. Go to work!')
-}
-
+let dayOff = false
 let timeWokeUp = 8
+let drankMorningSmoothie = true
+let morningYoga = true
+
+showOnPage('<b>Is it my day off?</b>')
+
+showOnPage('<b>What time did i wake up?</b> ---> ' + timeWokeUp)
 let timeLeftToWalkDogs = (11 - timeWokeUp)
-console.log (timeLeftToWalkDogs)
+showOnPage (timeLeftToWalkDogs + ' hours left to walk dogs before its too hot')
 
-let sochiWalked = false
-let charliewalked = false
-
-if (sochiWalked && charliewalked) {
-    let bothDogsWalked = 'Both dogs have been walked'
-    console.log (bothDogsWalked)
-} else if (sochiWalked || charliewalked) {
-    let oneDogWalked = 'I still need to walk the other dog'
-    console.log (oneDogWalked)
-} else {
-    let walkBothdogs = 'I need to walk both dogs!'
-    console.log (walkBothdogs)
+if (timeWokeUp >= 12) {
+showOnPage ('It is too late. It is too hot outside to walk dogs. I am unable to walk dogs this morning')
+} else if (timeWokeUp <12) {
+    showOnPage('It is still early. It will not be too hot to walk dogs. I am able to walk dogs')
 }
 
-showOnPage ('---<b>My global variable data</b>---')
-showOnPage('Is it my day off? ---> ' + dayOff)
-showOnPage ('What time did I wake up ---> ' + timeWokeUp)
-showOnPage ('Have I walked Sochi yet? ---> ' +sochiWalked)
-showOnPage ('Have I walked Charlie yet? --> ' + charliewalked)
-showOnPage ('--- <b>End of global variable data<b> ---')
-  
-showOnPage('Can I walk the dogs today? ---> ' + dayOff )
-showOnPage('Time left to walk dogs before its too hot for them: ' + timeLeftToWalkDogs + ' hours')
-showOnPage('Dog walking status: '  )
+showOnPage('<b>Have I finished my morning exercise and drank my breakfast smoothie?</b>')
+
+if (drankMorningSmoothie && morningYoga) {
+    let bothTasksDone = 'Both taks are done, you are able to walk the dogs'
+    showOnPage(bothTasksDone)
+} else if (drankMorningSmoothie || morningYoga) {
+    let oneTaskDone= 'One task is done, I am almost able to talk the dogs'
+    showOnPage(oneTaskDone)
+} else {
+    let noTasksDone = 'No tasks are complete, I am unable to walk the dogs'
+    showOnPage(noTasksDone)
+}
+
+showOnPage('<b>Is it my day off?</b>')
+
+if (dayOff >= true) {
+    showOnPage('Yes it is, you can walk the dogs today')
+} else {
+    showOnPage('No it isnt, you cant walk the dogs today. Go to work!')
+}
