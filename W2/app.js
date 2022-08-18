@@ -4,7 +4,7 @@ const showOnPage = function (text) {
     let outputDiv = document.getElementById("output")
     outputDiv.append(newParagraph)
 }
-showOnPage('Am I able to walk my dogs today?')
+showOnPage('---Am I able to walk my dogs today?---')
 
 let dayOff = false
 let timeWokeUp = 8
@@ -16,7 +16,7 @@ showOnPage('<b>What time did i wake up?</b>')
 if (timeWokeUp >= 12) {
 showOnPage (timeWokeUp +', It is too late. It is too hot outside to walk dogs. I am unable to walk dogs this morning')
 } else if (timeWokeUp <12) {
-    showOnPage(timeWokeUp +', It is still early. It will not be too hot to walk dogs. I am able to walk dogs')
+    showOnPage(timeWokeUp +' Oclock. It is still early. It will not be too hot to walk dogs. I am able to walk dogs')
 }
 
 showOnPage('<b>Have I finished my morning exercise and drank my breakfast smoothie?</b>')
