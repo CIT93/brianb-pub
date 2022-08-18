@@ -6,10 +6,11 @@ const showOnPage = function (text) {
 }
 showOnPage('---Am I able to walk my dogs today?---')
 
-let dayOff = false
 let timeWokeUp = 8
+let dogsFed = 2
 let drankMorningSmoothie = true
 let morningYoga = true
+let dayOff = false
 
 showOnPage('<b>What time did i wake up?</b>')
 
@@ -17,6 +18,14 @@ if (timeWokeUp >= 12) {
 showOnPage (timeWokeUp +', It is too late. It is too hot outside to walk dogs. I am unable to walk dogs this morning')
 } else if (timeWokeUp <12) {
     showOnPage(timeWokeUp +' Oclock. It is still early. It will not be too hot to walk dogs. I am able to walk dogs')
+}
+
+showOnPage('<b>Have I fed both dogs?</b>')
+
+if (dogsFed >= 2) {
+    showOnPage ('both dogs are fed, they are ready to be walked')
+} else if (dogsFed < 2) {
+    showOnPage ('both dogs are not fed, they are not ready to be walked')
 }
 
 showOnPage('<b>Have I finished my morning exercise and drank my breakfast smoothie?</b>')
