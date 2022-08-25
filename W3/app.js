@@ -8,6 +8,8 @@ const showOnPage = function (text) {
 showOnPage('<b>---Am I able to walk my dogs today?---</b>')
 
 
+showOnPage('<b>Is there time left before noon?</b>')
+
 let timeToWalkDog = function (timeWokeUp, twelvePm) {
     let remainingTime = (twelvePm - timeWokeUp)
    walkingPrompt = ''
@@ -25,6 +27,8 @@ let result = timeToWalkDog(8,12)
 
 showOnPage(result)
 
+showOnPage('<b>Is it too hot outide?</b>')
+
 let whatIsTheTemp = function (ninteyFiveDegrees, currentTemp) {
     let tooHot = (ninteyFiveDegrees - currentTemp)
    tempPrompt = ''
@@ -37,6 +41,17 @@ let whatIsTheTemp = function (ninteyFiveDegrees, currentTemp) {
 
    return `It is ${tooHot} degrees under 95, ${tempPrompt}`
 }
+
 let answer = whatIsTheTemp(95,80)
 
 showOnPage(answer)
+
+showOnPage('<b>Is it my day off?</b>')
+
+let dayOff = true
+
+if (dayOff >= true) {
+    showOnPage('Yes it is, you can walk the dogs today')
+} else {
+    showOnPage('No it isnt, you cant walk the dogs today. Go to work!')
+}
