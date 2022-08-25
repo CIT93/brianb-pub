@@ -45,13 +45,3 @@ let whatIsTheTemp = function (ninteyFiveDegrees, currentTemp) {
 let answer = whatIsTheTemp(95,80)
 
 showOnPage(answer)
-
-showOnPage('<b>Is it my day off?</b>')
-
-let dayOff = true
-
-if (dayOff >= true) {
-    showOnPage('Yes it is, you can walk the dogs today')
-} else {
-    showOnPage('No it isnt, you cant walk the dogs today. Go to work!')
-}
