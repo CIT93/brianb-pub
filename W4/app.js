@@ -28,7 +28,7 @@ const walkTheDogs = {
       tempPrompt = "It is too hot, you cannot walk dogs";
     }
 
-    return `It is ${tooHot} degrees under 95, ${tempPrompt}`;
+    return `It is ${tooHot} degrees, ${tempPrompt}`;
   },
 };
 
