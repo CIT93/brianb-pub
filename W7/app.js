@@ -37,6 +37,10 @@ const decision = function () {
 
 decision();
 
+const newParagraph = document.createElement('p')
+newParagraph.textContent = "If it is before 12 P.M. and under 95 degrees it will say it's ok to walk the dogs"
+document.querySelector('body').appendChild(newParagraph)
+
 document.querySelector('button').addEventListener('click', function(e) {
-    console.log(dogWalk)
+    e.target.textContent = "clicked!"
 })
