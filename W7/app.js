@@ -18,15 +18,16 @@ const dayList = [
 const dogWalk = function () { 
     let temp = Math.floor(Math.random() * 120);
     let timeWokeUp = Math.floor(Math.random() * 15);
-   
+    let response = ''
+
     if (timeWokeUp >= 12 && temp >= 95) {
-    return "It is too late and too hot to walk the dogs";
+    response = "It is too late and too hot to walk the dogs";
   } else if (timeWokeUp >= 12 && temp < 95) {
-    return "It is too late to walk the dogs";
+    response = "It is too late to walk the dogs";
   } else if (timeWokeUp < 12 && temp >= 95) {
-    return "It is too hot to walk the dogs";
+    response = "It is too hot to walk the dogs";
   } else if (timeWokeUp < 12 && temp < 95) {
-    return "It is still cool and early, you may walk your";
+    response = "It is still cool and early, you may walk your";
   }
 };
 
@@ -37,8 +38,9 @@ const decision = function () {
 
 decision();
 
+
 document.querySelector('button').addEventListener('click', function(e) {
     const newParagraph = document.createElement('p')
-newParagraph.textContent = "If it is before 12 P.M. and under 95 degrees it will say it's ok to walk the dogs"
+newParagraph.textContent = (dogWalk)
 document.querySelector('body').appendChild(newParagraph)
 })
