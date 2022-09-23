@@ -11,7 +11,7 @@ const dayList = [
     day: 'Wednesday',
   },
   {
-    day: 'Monday'
+    day: 'Thursday'
   }
 ];
 
@@ -20,7 +20,7 @@ const dogWalk = function () {
     let timeWokeUp = Math.floor(Math.random() * 15);
    
     if (timeWokeUp >= 12 && temp >= 95) {
-    return "<p>It is too late and too hot to walk the dogs</p>";
+    return "It is too late and too hot to walk the dogs";
   } else if (timeWokeUp >= 12 && temp < 95) {
     return "It is too late to walk the dogs";
   } else if (timeWokeUp < 12 && temp >= 95) {
