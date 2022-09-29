@@ -33,10 +33,10 @@ let dogWalk = function (obj) {
 
 //global variable linking dayInfo to the array & defining dayOff as true
 let dayInfo = [];
-let dayOff = true;
+let dayOff = false;
 
 //function rendering output to DOM and my attempt to plug in a function the checkbox that overrides other function
-const loop = function () {
+renderDayList = function () {
   if (dayOff === false) {
     document.querySelector("#dayInfo").innerHTML =
       "You have work today, you cannot walk the dogs";
@@ -50,7 +50,7 @@ const loop = function () {
 
 //event listener that shows the submit button has been clicked
 document.querySelector("button").addEventListener("click", function (e) {
-  document.getElementById("dayInfo").innerHTML = loop();
+  document.getElementById("dayInfo").innerHTML = renderDayList();
   e.target.textContent = "Results are being displayed";
 });
 
