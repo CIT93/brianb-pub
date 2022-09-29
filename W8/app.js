@@ -1,3 +1,7 @@
+//global variable linking dayInfo to the array & defining dayOff as true
+let dayInfo = [];
+let dayOff = false;
+
 //array of objects
 
 const dayList = [
@@ -30,10 +34,6 @@ let dogWalk = function (dayList) {
     return "It is still cool and early, you may walk your dogs";
   }
 };
-
-//global variable linking dayInfo to the array & defining dayOff as true
-let dayInfo = [];
-let dayOff = false;
 
 //function rendering output to DOM and my attempt to plug in a function the checkbox that overrides other function
 renderDayList = function () {
