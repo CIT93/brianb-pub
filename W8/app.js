@@ -19,14 +19,14 @@ const dayList = [
 ];
 
 //function factoring in the temp and time woke up from the array of objects
-let dogWalk = function (obj) {
-  if (obj.awake >= 12 && obj.temp >= 95) {
+let dogWalk = function (dayList) {
+  if (dayList.awake >= 12 && dayList.temp >= 95) {
     return "It is too late and too hot to walk the dogs";
-  } else if (obj.awake >= 12 && obj.temp < 95) {
+  } else if (dayList.awake >= 12 && dayList.temp < 95) {
     return "It is too late to walk the dogs";
-  } else if (obj.awake < 12 && obj.temp >= 95) {
+  } else if (dayList.awake < 12 && dayList.temp >= 95) {
     return "It is too hot to walk the dogs";
-  } else if (obj.awake < 12 && obj.temp < 95) {
+  } else if (dayList.awake < 12 && dayList.temp < 95) {
     return "It is still cool and early, you may walk your dogs";
   }
 };
@@ -41,8 +41,8 @@ renderDayList = function () {
     document.querySelector("#dayInfo").innerHTML =
       "You have work today, you cannot walk the dogs";
   } else {
-    dayList.forEach(function (obj) {
-      dayInfo.push(dogWalk(obj));
+    dayList.forEach(function (dayList) {
+      dayInfo.push(dogWalk(dayList));
     });
   }
   return dayInfo;
