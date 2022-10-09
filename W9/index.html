@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <h1><b>Should I walk my dogs?</b></h1>
+                <input id="checkbox" type="checkbox" />Is it my day off?
+        </div>
+        <div>
+        <form id ="form">
+            <label for="name">Enter name here:</label>
+            <input id="name" name="name" placeholder="first name" type="text" required/>
+        </div>
+        <div>
+        <button type="submit" id = "walk-button" onclick="renderDayList">Display Results</button>
+        </div>
+        <button id="remove-all">Remove Results</button>
+        </form>
+        <div id="dayInfo"></div>
+        <div id="error"></div>
+        <script src="uuidv4.js"></script>
+        <script src="app-functions.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
